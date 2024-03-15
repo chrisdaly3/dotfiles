@@ -29,6 +29,12 @@ skip-levels = 1
 insert       = "underline"
 select       = "hidden"
 
+[editor.file-picker]
+hidden = false
+
+[editor.gutters.line-numbers]
+min-width = 1
+
 ### KEYS ###
 [keys.normal]
 # window movement
