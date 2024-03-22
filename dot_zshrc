@@ -129,6 +129,13 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Create pyenv environment
+create-venv() {
+    pyenv install --skip-existing ${1}
+    pyenv local ${1}
+    $(pyenv which python) -m venv ./venv
+}
+
 # Run python services locally with Pycurl
 export PKG_CONFIG_PATH="/opt/homebrew/bin/pkg-config"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
