@@ -66,7 +66,7 @@ wezterm.on('gui-startup', function(cmd)
     size = 0.25, 
     }
 
-  clock_pane:send_text 'tty-clock -cts\n'
+  clock_pane:send_text 'tty-clock -ctsC7\n'
 
   local misc_pane = clock_pane:split {
     direction = "Bottom",
