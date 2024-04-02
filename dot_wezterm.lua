@@ -84,6 +84,12 @@ wezterm.on('gui-startup', function(cmd)
     direction = "Bottom",
     size = 0.2,
   }
+
+  local clock = term_pane:split {
+    direction = "Right",
+    size = 0.25,
+  }
+  clock:send_text 'tty-clock -ctsC7\n'
   -- ensure the coding pane is opened first
   -- make sure the start pane is active in the default workspace
   coding_pane:activate()
