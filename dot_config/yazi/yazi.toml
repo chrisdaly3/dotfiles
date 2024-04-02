@@ -2,8 +2,3 @@
 ratio = [1, 2, 5]
 show_hidden = true
 linemode = "mtime"
-
-[[manager.prepend_keymap]]
-on   = [ "<C-s>" ]
-run  = 'shell "$SHELL" --block --confirm'
-desc = "Open shell here"
