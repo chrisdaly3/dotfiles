@@ -15,6 +15,10 @@ end
 -- Changing the color scheme:
 config.color_scheme = "Sea Shells (Gogh)"
 
+-- front-end client options
+config.front_end = "WebGpu"
+config.max_fps = 144
+
 -- Setting default working directory:
 config.default_cwd = "/Users/cdaly/GITHome"
 
