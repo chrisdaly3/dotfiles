@@ -156,3 +156,6 @@ function ya() {
 	rm -f -- "$tmp"
 }
 ##### YAZI SHELL WRAPPER FUNCTION ######
+
+# Init starship prompt
+eval "$(starship init zsh)"
