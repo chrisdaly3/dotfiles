@@ -13,7 +13,7 @@ if wezterm.config_builder then
 end
 
 -- Changing the color scheme:
-config.color_scheme = "Sea Shells (Gogh)"
+config.color_scheme = "Liquid Carbon (Gogh)"
 
 -- front-end client options
 config.front_end = "WebGpu"
