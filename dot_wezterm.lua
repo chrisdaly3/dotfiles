@@ -66,16 +66,11 @@ wezterm.on('gui-startup', function(cmd)
   local tab, start_pane, window = mux.spawn_window{workspace = "default"}
 
   local clock_pane = start_pane:split {
-    direction = "Right",
+    direction = "Bottom",
     size = 0.25, 
     }
 
   clock_pane:send_text 'tty-clock -ctsC7\n'
-
-  local misc_pane = clock_pane:split {
-    direction = "Bottom",
-    size = 0.75,
-  }
 
   local coding_tab, coding_pane, coding_window = mux.spawn_window {
     workspace = "coding",
@@ -84,15 +79,11 @@ wezterm.on('gui-startup', function(cmd)
   -- A workspace for working on code projects and writing code
   -- comes with sane defaults for working in my default editor of Helix
 
-  local term_pane = coding_pane:split {
+  local clock = coding_pane:split {
     direction = "Bottom",
     size = 0.2,
   }
 
-  local clock = term_pane:split {
-    direction = "Right",
-    size = 0.25,
-  }
   clock:send_text 'tty-clock -ctsC7\n'
   -- ensure the coding pane is opened first
   -- make sure the start pane is active in the default workspace
@@ -279,10 +270,8 @@ config.keys = {
   { key = "s",          mods = "LEADER",      action = act.SplitVertical { domain = "CurrentPaneDomain" } },
   { key = "v",          mods = "LEADER",      action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
   { key = "x",          mods = "LEADER",      action = act.CloseCurrentPane { confirm = false }},
-  { key = "h",          mods = "LEADER",      action = act.ActivatePaneDirection("Left") },
-  { key = "j",          mods = "LEADER",      action = act.ActivatePaneDirection("Down") },
-  { key = "k",          mods = "LEADER",      action = act.ActivatePaneDirection("Up") },
-  { key = "l",          mods = "LEADER",      action = act.ActivatePaneDirection("Right") },
+  { key = "b",          mods = "LEADER",      action = act.ActivateWindowRelative(-1) },
+  { key = "n",          mods = "LEADER",      action = act.ActivateWindowRelative(1) },
   { key = "q",          mods = "LEADER",      action = act.CloseCurrentPane { confirm = true } },
 }
 
