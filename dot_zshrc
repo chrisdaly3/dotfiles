@@ -123,6 +123,8 @@ export GOPATH=/Users/cdaly/go
 export PATH=$PATH:$GOPATH/bin
 export GOOS=darwin
 export GOARCH=arm64
+export GOPRIVATE=github.com/urbn
+export GITHUB_SSH_KEY=$(cat ~/.ssh/id_rsa)
 
 # Python local dev needs
 export PYENV_ROOT="$HOME/.pyenv"
