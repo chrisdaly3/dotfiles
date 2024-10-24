@@ -60,39 +60,6 @@ config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_max_width = 1000
 
--- Create a tri-split in the default workspace
--- which will show the clock in the top right corner, and a misc set of panes in the bottom
-wezterm.on('gui-startup', function(cmd)
-  local tab, start_pane, window = mux.spawn_window{workspace = "default"}
-
-  local clock_pane = start_pane:split {
-    direction = "Bottom",
-    size = 0.25, 
-    }
-
-  clock_pane:send_text 'tty-clock -ctsC7\n'
-
-  local coding_tab, coding_pane, coding_window = mux.spawn_window {
-    workspace = "coding",
-    cwd = "/Users/cdaly/GITHome",
-  }
-  -- A workspace for working on code projects and writing code
-  -- comes with sane defaults for working in my default editor of Helix
-
-  local clock = coding_pane:split {
-    direction = "Bottom",
-    size = 0.2,
-  }
-
-  clock:send_text 'tty-clock -ctsC7\n'
-  -- ensure the coding pane is opened first
-  -- make sure the start pane is active in the default workspace
-  coding_pane:activate()
-  coding_pane:send_text("ya\n")
-  start_pane:activate()
-  end)
-
-
 wezterm.on("update-status", function(window, pane)
   -- Workspace name
   local stat = window:active_workspace()
@@ -250,22 +217,12 @@ config.key_tables = {
     { key = "Escape", action = "PopKeyTable" },
     { key = "Enter",  action = "PopKeyTable" },
   },
-  -- Pick from a set of workspaces
-  workspaces = {
-    { key = "d",      action = act.SwitchToWorkspace{ name =  "default" } },
-    { key = "c",      action = act.SwitchToWorkspace{ name =  "coding", } },
-    { key = "m",      action = act.SwitchToWorkspace{ name =  "monitoring", spawn = { args = {"/opt/homebrew/bin/btop"}, } } },
-    { key = "i",      action = act.ShowLauncherArgs{flags = "FUZZY|WORKSPACES"} },
-    { key = "Escape", action = "PopKeyTable" },
-    { key = "Enter",  action = "PopKeyTable" },
-  }
 }
 
 config.keys = {
 	{ key = ',', mods = 'LEADER', action = act.ActivateWindowRelative(1) },
 	{ key = '.', mods = 'LEADER', action = act.ActivateWindowRelative(-1) },
 	{ key = "r", mods = "LEADER", action = act.ActivateKeyTable { name = "resize_pane", one_shot = false } },
-	{ key = "w", mods = "LEADER", action = act.ActivateKeyTable { name = "workspaces", one_shot = true } },
   --!! Pane keybindings !!-- 
   { key = "s",          mods = "LEADER",      action = act.SplitVertical { domain = "CurrentPaneDomain" } },
   { key = "v",          mods = "LEADER",      action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
