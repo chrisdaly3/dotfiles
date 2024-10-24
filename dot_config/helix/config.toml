@@ -43,6 +43,7 @@ C-j = "jump_view_down"
 C-k = "jump_view_up"
 C-l = "jump_view_right"
 C-v = ":vnew"
+X   = "extend_line_above"
 
 # buffer movement
 C-b = "goto_previous_buffer"
