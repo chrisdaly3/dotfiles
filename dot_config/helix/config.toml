@@ -6,6 +6,7 @@ line-number  = "relative"
 cursorcolumn = true
 bufferline = "multiple"
 color-modes  = true
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left         = [ "separator", "spacer", "mode","spacer","separator","spacer", "version-control", "spacer", "spinner"]
@@ -34,6 +35,11 @@ hidden = false
 
 [editor.gutters.line-numbers]
 min-width = 1
+
+[editor.inline-diagnostics]
+cursor-line = "info"
+other-lines = "error"
+prefix-len = 2
 
 ### KEYS ###
 [keys.normal]
