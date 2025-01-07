@@ -18,7 +18,6 @@ mode.insert  = "INSIDE"
 mode.select  = "SELECT"
 
 [editor.lsp]
-snippets         = false
 display-messages = true
 
 [editor.indent-guides]
@@ -37,7 +36,7 @@ hidden = false
 min-width = 1
 
 [editor.inline-diagnostics]
-cursor-line = "info"
+cursor-line = "warning"
 other-lines = "error"
 prefix-len = 2
 
