@@ -52,9 +52,6 @@ C-v = ":vnew"
 
 # remaps
 X   = "extend_line_above"
-w   = "extend_next_sub_word_start"
-b   = "extend_prev_sub_word_start"
-e   = "extend_next_sub_word_end"
 
 # buffer movement
 C-b = "goto_previous_buffer"
