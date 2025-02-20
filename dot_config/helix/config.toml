@@ -7,6 +7,7 @@ cursorcolumn = true
 bufferline = "multiple"
 color-modes  = true
 end-of-line-diagnostics = "hint"
+jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 
 [editor.statusline]
 left         = [ "separator", "spacer", "mode","spacer","separator","spacer", "version-control", "spacer", "spinner"]
@@ -51,7 +52,14 @@ C-v = ":vnew"
 
 # remaps
 X   = "extend_line_above"
+ret = "goto_word"
 
 # buffer movement
 C-b = "goto_previous_buffer"
 C-n = "goto_next_buffer"
+
+# Create a new minor mode for git changes
+[keys.normal."\\"]
+n = "goto_next_change"
+N = "goto_prev_change"
+d = ":reset-diff-change"
