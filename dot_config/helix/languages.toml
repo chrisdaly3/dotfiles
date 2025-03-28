@@ -36,7 +36,7 @@ name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
 
 [language-server.solargraph]
-command = "/Users/cdaly/.rbenv/shims/rubocop"
+command = "/Users/cdaly/.rbenv/shims/solargraph"
 args = ["stdio"]
 config = { diagnostics = false, formatting = false }
 
