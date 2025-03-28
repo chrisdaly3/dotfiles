@@ -38,14 +38,10 @@ language-servers= [ "svelteserver", "tailwindcss-ls" ]
 [language-server.solargraph]
 command = "/Users/cdaly/.rbenv/shims/solargraph"
 args = ["stdio"]
-config = { diagnostics = false, formatting = false }
-
-[language-server.rubocop]
-command = "/Users/cdaly/.rbenv/shims/rubocop"
-args = ["--lsp", "--stderr", "--fail-level", "fatal"]
-timeout = 3
+config = { diagnostics = true, formatting = false }
 
 [[language]]
 name = "ruby"
-language-servers = ["rubocop", { name = "solargraph", except-features = [ "format", "diagnostics" ] }]
+formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
+language-servers=[{name="solargraph"}]
 auto-format = true
