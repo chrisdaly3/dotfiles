@@ -34,14 +34,3 @@ language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
 [[language]]
 name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
-
-[language-server.solargraph]
-command = "/Users/cdaly/.rbenv/shims/solargraph"
-args = ["stdio"]
-config = { diagnostics = true, formatting = false }
-
-[[language]]
-name = "ruby"
-formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
-language-servers=[{name="solargraph"}]
-auto-format = true
