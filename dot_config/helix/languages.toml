@@ -34,3 +34,14 @@ language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
 [[language]]
 name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
+
+[[language]]
+name = "ruby"
+language-servers = ["ruby-lsp"]
+formatter = { command = "bundle", args = ["exec", "stree", "format"] }
+auto-format = true
+auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+config = { diagnostics = true, formatting = false }
