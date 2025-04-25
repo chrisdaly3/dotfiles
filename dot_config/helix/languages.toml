@@ -35,17 +35,11 @@ language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
 name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
 
-[language-server.ruby-lsp]
-command = "ruby-lsp"
-config = { provideFormatter = true }
-
-[language-server.standardrb]
-command = "standardrb"
-args = [ "--lsp" ]
-config = { provideFormatter = true }
-
 [[language]]
 name = "ruby"
+formatter = { command = "bundle", args = ["exec", "rubocop", "--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal"] }
 auto-format = true
-language-servers = [ { name = "ruby-lsp", except-features = [ "format" ]}, "standardrb" ]
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|", "'" = "'", '"' = '"' }
+
+[language-server.solargraph]
+config = { diagnostics = true, formatting = false }
