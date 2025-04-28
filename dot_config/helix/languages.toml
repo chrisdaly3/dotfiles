@@ -36,15 +36,13 @@ name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
 
 [language-server.solargraph]
-command = "solargraph"
-args = ["stdio"]
-
-[language-server.standardrb]
-command = "standardrb"
-args = ["--lsp"]
+command="solargraph"
+config.diagnostics=true
+config.formatting=false
 
 [[language]]
 name = "ruby"
-auto-format = true
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|", "'" = "'", '"' = '"' }
-language-servers = [ {name = "solargraph", except-features = ["format", "diagnostics"] },  "standardrb" ]
+formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
+auto-format = true
+language-servers=[{name="solargraph"}]

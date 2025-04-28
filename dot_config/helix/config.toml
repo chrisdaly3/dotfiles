@@ -1,8 +1,7 @@
-theme = "catppuccin_latte"
+theme = "spaceduck"
 
 ### EDITOR ###
 [editor]
-line-number  = "relative"
 cursorcolumn = true
 bufferline = "multiple"
 color-modes  = true
@@ -17,9 +16,6 @@ separator    = "⤫"
 mode.normal  = "NORM"
 mode.insert  = "INSIDE"
 mode.select  = "SELECT"
-
-[editor.lsp]
-display-messages = true
 
 [editor.indent-guides]
 render = true
@@ -37,7 +33,7 @@ hidden = false
 min-width = 1
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = "hint"
 other-lines = "error"
 prefix-len = 2
 
