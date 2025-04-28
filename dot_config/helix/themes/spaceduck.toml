@@ -1,0 +1,75 @@
+"ui.background"= { fg = "foreground", bg = "background" }
+"ui.selection" = { fg = "foreground", bg = "orange" }
+
+
+# User Interface
+"ui.virtual.jump-label" = {fg = "yellow", modifiers = ["bold"] }
+"ui.virtual.inlay-hint" = {fg = "dark_purple2", bg = "selection", modifiers = ["italic"] } # affects LSP inlay hint coloring
+"ui.linenr" = {fg = "purple2"} # line gutters
+"ui.linenr.selected" = { fg = "purple2", bg = "yellow" } # line gutter selected
+"ui.cursorline" = {bg = "cursor_line"}
+"ui.cursor.primary" = {fg = "foreground", bg = "orange" }
+"ui.text" = { fg = "foreground" }
+"ui.popup" = { fg = "foreground" }
+"ui.popup.info" = { fg = "foreground" }
+"ui.window" = { fg = "foreground" }
+# picker windows
+"ui.text.focus" = { fg = "green", modifiers = ["bold"] }
+"ui.menu.selected" = "green"
+
+# STATUSLINE
+"ui.statusline.insert" = { fg = "green", bg = "dark_purple" }
+"ui.statusline.normal" = { fg = "purple", bg = "dark_purple" }
+"ui.statusline.select" = { fg = "orange", bg = "dark_purple" }
+
+# BUFFERS
+"ui.bufferline.active" = { fg = "foreground", bg = "background" , "modifiers" = ["italic", "dim"]}
+
+# ERRORS / DIAGNOSTICS
+"error" = "red"
+"diagnostic.error" = { fg = "red", underline = { color = "red", style = "double_line" }, modifiers = ["bold", "reversed"] }
+
+"warning" = "orange"
+"diagnostic.warning" = { underline = { color = "orange", style = "double_line" }, modifiers = ["dim", "italic"] }
+
+"info" = {fg = "cyan", modifiers = ["dim", "italic"]}
+"diagnostic.info" = { underline = { color = "cyan", style = "dotted" } }
+
+"hint" = {fg = "green", modifiers = ["dim", "italic"]}
+"diagnostic.hint" = { underline = { color = "green", style = "dotted" } }
+
+"diagnostic.unnecessary" = { bg = "dark_purple2", modifiers = ["slow_blink"] }
+"diagnostic.deprecated" = { bg = "dark_purple2", modifiers = ["crossed_out", "italic"] }
+
+
+
+
+# TREE-SITTER SCOPES
+"string" = "cyan"
+"keyword" = {fg = "purple2"}
+"namespace" = "green"
+"type"  = "yellow"
+"variable" = "foreground"
+"operator" = "magenta"
+"attribute" = "foreground"
+"punctuation" = "foreground"
+"comment" = "dark_purple2"
+"function" = "green"
+"type.builtin" = "green"
+"constant" = "orange"
+
+[palette]
+background = "#0f111b"
+foreground = "#ecf0c1"
+selection = "#1b1c36"
+cursor_line = "#16172d"
+red = "#e33400"
+orange = "#e39400"
+green = "#5ccc96"
+yellow = "#f2ce00"
+purple = "#b3a1e6"
+purple2 = "#7a5ccc"
+dark_purple = "#30365f"
+dark_purple2 = "#686f9a"
+cyan = "#00a3cc"
+magenta = "#ce6f8f"
