@@ -38,25 +38,32 @@
 "hint" = {fg = "green", modifiers = ["dim", "italic"]}
 "diagnostic.hint" = { underline = { color = "green", style = "dotted" } }
 
-"diagnostic.unnecessary" = { bg = "dark_purple2", modifiers = ["slow_blink"] }
-"diagnostic.deprecated" = { bg = "dark_purple2", modifiers = ["crossed_out", "italic"] }
+"diagnostic.unnecessary" = { bg = "selection", modifiers = ["slow_blink"] }
+"diagnostic.deprecated" = { bg = "selection", modifiers = ["crossed_out", "italic"] }
 
 
 
 
 # TREE-SITTER SCOPES
-"string" = "cyan"
-"keyword" = {fg = "purple2"}
+"string" = "green"
+"keyword" = {fg = "purple"}
 "namespace" = "green"
 "type"  = "yellow"
 "variable" = "foreground"
+"variable.parameter" = {fg = "cyan", bg = "selection", modifiers = ["italic"] }
+"variable.other.member" = "magenta"
 "operator" = "magenta"
 "attribute" = "foreground"
 "punctuation" = "foreground"
 "comment" = "dark_purple2"
-"function" = "green"
+"function" = "cyan"
+"function.macro" = "orange"
 "type.builtin" = "green"
 "constant" = "orange"
+# Git stuff
+"diff.plus" = "green"
+"diff.minus" = "magenta"
+"diff.delta" = "orange"
 
 [palette]
 background = "#0f111b"

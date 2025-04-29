@@ -1,0 +1,18 @@
+inherits = "flatwhite"
+"ui.virtual.jump-label" = {fg = "blue_text_sec", bg = "blue_bg"}
+"ui.menu.selected" = {fg = "base7", bg = "accent" }
+
+"ui.bufferline.active" = { fg = "base1", bg = "base7" , modifiers = ["italic", "dim"]}
+"ui.text.focus" = {fg = "accent", modifiers = ["bold"] } 
+
+"error" = "diff_delete"
+"diagnostic.error" = { fg = "diff_delete", underline = { color = "diff_delete", style = "double_line" }, modifiers = ["bold", "reversed"] }
+
+"warning" = "diff_renamed"
+"diagnostic.warning" = { bg = "orange_bg", underline = { color = "orange_text", style = "double_line" }, modifiers = ["crossed_out", "italic"] }
+
+"hint" = {bg = "orange_bg", modifiers = ["bold"] }
+
+# TREE-SITTER SCOPES
+"type"  = {fg = "base2", modifiers = ["italic", "dim" ]}
+"operator" = {fg = "accent", bg = "white" }
