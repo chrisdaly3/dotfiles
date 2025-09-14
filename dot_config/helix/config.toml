@@ -1,4 +1,4 @@
-theme = "flatterwhite"
+theme = "dracula"
 
 ### EDITOR ###
 [editor]
@@ -33,8 +33,7 @@ hidden = false
 min-width = 1
 
 [editor.inline-diagnostics]
-cursor-line = "hint"
-other-lines = "error"
+cursor-line = "warning"
 prefix-len = 2
 
 ### KEYS ###
