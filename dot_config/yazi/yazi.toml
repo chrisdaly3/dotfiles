@@ -1,4 +1,4 @@
 [manager]
-ratio = [1, 2, 5]
+ratio = [0, 2, 5]
 show_hidden = true
-linemode = "mtime"
+linemode = "none"

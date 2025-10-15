@@ -1,7 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local act = wezterm.action
-local mux = wezterm.mux
 
 -- This table will hold the configuration.
 local config = {}
@@ -30,7 +29,7 @@ config.enable_scroll_bar = true
 
 -- Fonts
 config.font = wezterm.font("CommitMono")
-config.font_size = 15.0
+config.font_size = 16.0
 config.line_height = 1.1
 
 -- Window Opacity
@@ -220,6 +219,7 @@ config.key_tables = {
 }
 
 config.keys = {
+	{ key = "Enter", mods = "OPT", action = act.DisableDefaultAssignment },
 	{ key = ',', mods = 'LEADER', action = act.ActivateWindowRelative(1) },
 	{ key = '.', mods = 'LEADER', action = act.ActivateWindowRelative(-1) },
 	{ key = "r", mods = "LEADER", action = act.ActivateKeyTable { name = "resize_pane", one_shot = false } },

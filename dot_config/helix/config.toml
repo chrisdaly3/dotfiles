@@ -48,6 +48,10 @@ C-v = ":vnew"
 # remaps
 X   = "extend_line_above"
 ret = "goto_word"
+W = "@miw"
+
+# Copy to both internal and external clipboard
+y = ["yank_main_selection_to_clipboard", "yank"]
 
 # buffer movement
 C-b = "goto_previous_buffer"
