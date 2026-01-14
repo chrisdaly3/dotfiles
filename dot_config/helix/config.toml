@@ -28,6 +28,7 @@ select       = "hidden"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false
 
 [editor.gutters.line-numbers]
 min-width = 1
