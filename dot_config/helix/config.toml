@@ -3,18 +3,19 @@ theme = "dracula"
 ### EDITOR ###
 [editor]
 cursorcolumn = true
+cursorline = true
 bufferline = "multiple"
 color-modes  = true
 end-of-line-diagnostics = "hint"
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 
 [editor.statusline]
-left         = [ "separator", "spacer", "mode","spacer","separator","spacer", "version-control", "spacer", "spinner"]
-center       = [ "workspace-diagnostics","spacer","separator", "file-base-name","separator", "spacer", "position-percentage" ]
-right        = ["file-modification-indicator", "spacer","separator", "file-type"]
-separator    = "⤫"
+left = ["mode", "file-name", "spinner", "spacer"]
+center = ["version-control", "spacer"]
+right = ["workspace-diagnostics", "separator", "selections", "separator", "position", "separator"]
+separator    = "|"
 mode.normal  = "NORM"
-mode.insert  = "INSIDE"
+mode.insert  = "INSERT"
 mode.select  = "SELECT"
 
 [editor.indent-guides]
@@ -47,12 +48,13 @@ C-l = "jump_view_right"
 C-v = ":vnew"
 
 # remaps
-X   = "extend_line_above"
+X   = ["extend_line_up", "extend_to_line_bounds"]
 ret = "goto_word"
 W = "@miw"
 
 # Copy to both internal and external clipboard
 y = ["yank_main_selection_to_clipboard", "yank"]
+Y = [":yank-join", ":clipboard-yank-join"]
 
 # buffer movement
 C-b = "goto_previous_buffer"
