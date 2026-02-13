@@ -18,22 +18,19 @@ typeCheckingMode = "off"
 command = "ruff"
 args = ["server"]
 
-# [[language]]
-# name = "python"
-# language-servers = [ "pyright", "ruff" ]
-
-# [language-server.pyright.config.python.analysis]
-# typeCheckingMode = "basic"
-
-# [language-server.ruff]
-# command = "ruff-lsp"
-
-# [language-server.ruff.config.settings]
-# args = ["--ignore", "E501"]
-
 [language.formatter]
 command = "black"
 args = ["--line-length", "88", "--quiet", "-"]
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = {command = "gofumpt"}
+language-servers = ["gopls"]
+
+[language-server.gopls.config]
+"formatting.gofumpt" = true
+"formatting.local" = "github.com/urbn/"
 
 [[language]]
 name = "html"

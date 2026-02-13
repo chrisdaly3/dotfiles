@@ -5,6 +5,7 @@ ui {
 }
 
 support_kitty_keyboard_protocol false
+session_serialization false
 
 keybinds clear-defaults=true {
     unbind "Alt i" "Alt o"

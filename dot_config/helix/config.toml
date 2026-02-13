@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "snazzy-jump"
 
 ### EDITOR ###
 [editor]
@@ -51,6 +51,8 @@ C-v = ":vnew"
 X   = ["extend_line_up", "extend_to_line_bounds"]
 ret = "goto_word"
 W = "@miw"
+S-l = "@vgl<esc>"
+S-h = "@vgs<esc>"
 
 # Copy to both internal and external clipboard
 y = ["yank_main_selection_to_clipboard", "yank"]
