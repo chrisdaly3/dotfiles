@@ -104,10 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Sources bash OSC7 integration for wezterm
-source "/Users/cdaly/.wezterm_osc.sh"
-
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/cdaly/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cdaly/google-cloud-sdk/path.zsh.inc'; fi
 
