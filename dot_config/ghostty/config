@@ -1,0 +1,16 @@
+font-family = psudoFont Liga Mono
+font-size = 18
+font-thicken = true
+theme = Doom One
+
+background-opacity = 0.85
+background-opacity-cells = true
+background-blur = true
+
+link-previews = true
+clipboard-trim-trailing-spaces = true
+copy-on-select = true
+
+window-decoration = none
+macos-option-as-alt = true
+
