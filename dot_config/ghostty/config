@@ -1,6 +1,6 @@
 font-family = psudoFont Liga Mono
-font-size = 18
-font-thicken = true
+font-size = 16
+font-thicken = false
 theme = Doom One
 
 background-opacity = 0.85
