@@ -157,5 +157,3 @@ function ya() {
 
 # Init starship prompt
 eval "$(starship init zsh)"
-
-eval "$(zellij setup --generate-auto-start zsh)"
