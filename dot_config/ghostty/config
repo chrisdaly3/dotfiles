@@ -1,16 +1,20 @@
+# typography
+font-size=16
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
 font-family = psudoFont Liga Mono
-font-size = 16
-font-thicken = false
-theme = Doom One
 
+# aesthetics
+theme = Doom One
 background-opacity = 0.85
-background-opacity-cells = true
-background-blur = true
+background-blur=16
+background=#000000
+macos-titlebar-style = hidden
 
 link-previews = true
 clipboard-trim-trailing-spaces = true
 copy-on-select = true
 
-window-decoration = none
 macos-option-as-alt = true
 
