@@ -17,4 +17,5 @@ clipboard-trim-trailing-spaces = true
 copy-on-select = true
 
 macos-option-as-alt = true
+confirm-close-surface = false
 

@@ -8,11 +8,14 @@ layout {
     tab {
         pane split_direction="vertical" {
             pane split_direction="horizontal" size="30%" {
-                pane
-                pane
-                pane
+                pane command="${SHELL}" {
+                    args "-c" "yazi"
+                }
+                pane command="lazygit" size="60%"
             }
-            pane
+            pane edit="." {
+                focus true
+            }
         }
     }
 }
