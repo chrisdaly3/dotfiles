@@ -10,10 +10,10 @@ end-of-line-diagnostics = "hint"
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 
 [editor.statusline]
-left = ["mode", "file-name", "spinner", "spacer"]
+left = ["mode", "file-name", "spinner", "spacer", "file-modification-indicator", "spacer"]
 center = ["version-control", "spacer"]
 right = ["workspace-diagnostics", "separator", "selections", "separator", "position", "separator"]
-separator    = "|"
+separator    = "❰❱"
 mode.normal  = "NORM"
 mode.insert  = "INSERT"
 mode.select  = "SELECT"

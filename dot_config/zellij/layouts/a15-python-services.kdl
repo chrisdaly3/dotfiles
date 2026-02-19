@@ -7,11 +7,12 @@ layout {
     }
     tab {
         pane split_direction="vertical" {
-            pane split_direction="horizontal" size="30%" stacked=true {
+            pane split_direction="horizontal" size="40%" stacked=true {
                 pane expanded=true command="${SHELL}" {
                     args "-c" "yazi"
                 }
-                pane command="lazygit" size="60%"
+                pane command="lazygit"
+                pane
             }
             pane command="zsh" {
                 args "-c" "source ./venv/bin/activate && hx ."
