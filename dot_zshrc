@@ -159,3 +159,5 @@ function ya() {
 eval "$(starship init zsh)"
 
 eval "$(zellij setup --generate-auto-start zsh)"
+
+export PATH=$HOME/.local/bin:$PATH
