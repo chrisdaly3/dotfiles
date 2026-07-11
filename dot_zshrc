@@ -158,6 +158,19 @@ function ya() {
 # Init starship prompt
 eval "$(starship init zsh)"
 
-eval "$(zellij setup --generate-auto-start zsh)"
+# Auto-start zellij, but ATTACH to a single persistent "main" session rather than
+# spawning a new random session on every shell (the old `zellij setup
+# --generate-auto-start` behavior). Create additional sessions deliberately from
+# the session manager (Alt-m) when you actually want them.
+if [[ -z "$ZELLIJ" ]]; then
+    zellij attach -c main
+fi
 
 export PATH=$HOME/.local/bin:$PATH
+export CLAUDE_CODE_EFFORT_LEVEL=max
+
+# Reconcile the Claude Code statusline monthly-spend bar to the number shown in
+# claude.ai's "Your usage limits" panel.   Usage:  claude_sync 36.09
+claude_sync() {
+  bash "$HOME/.claude/usage-sync.sh" "$@"
+}
