@@ -167,7 +167,6 @@ if [[ -z "$ZELLIJ" ]]; then
 fi
 
 export PATH=$HOME/.local/bin:$PATH
-export CLAUDE_CODE_EFFORT_LEVEL=max
 
 # Reconcile the Claude Code statusline monthly-spend bar to the number shown in
 # claude.ai's "Your usage limits" panel.   Usage:  claude_sync 36.09
