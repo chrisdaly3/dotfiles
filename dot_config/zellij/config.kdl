@@ -156,6 +156,7 @@ keybinds clear-defaults=true {
             SwitchToMode "locked"
         }
         bind "Alt n" { NewTab; }
+        bind "Alt t" { CloseTab; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Alt 1" { GoToTab 1; }
