@@ -168,8 +168,3 @@ fi
 
 export PATH=$HOME/.local/bin:$PATH
 
-# Reconcile the Claude Code statusline monthly-spend bar to the number shown in
-# claude.ai's "Your usage limits" panel.   Usage:  claude_sync 36.09
-claude_sync() {
-  bash "$HOME/.claude/usage-sync.sh" "$@"
-}
