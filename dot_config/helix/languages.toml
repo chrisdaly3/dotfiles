@@ -1,28 +1,4 @@
 [[language]]
-name = "python"
-auto-format = true
-language-servers = [
-    {name = "pyright"},
-    {name = "ruff"},
-    {name = "mypy"}
-]
-
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
-
-[language-server.pyright.config.python.analysis]
-typeCheckingMode = "off"
-
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
-
-[language.formatter]
-command = "black"
-args = ["--line-length", "88", "--quiet", "-"]
-
-[[language]]
 name = "go"
 auto-format = true
 formatter = {command = "gofumpt"}
@@ -51,15 +27,3 @@ language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
 [[language]]
 name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
-
-[language-server.solargraph]
-command="solargraph"
-config.diagnostics=true
-config.formatting=false
-
-[[language]]
-name = "ruby"
-auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|", "'" = "'", '"' = '"' }
-formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
-auto-format = true
-language-servers=[{name="solargraph"}]
