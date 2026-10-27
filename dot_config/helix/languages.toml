@@ -6,7 +6,6 @@ language-servers = ["gopls"]
 
 [language-server.gopls.config]
 "formatting.gofumpt" = true
-"formatting.local" = "github.com/urbn/"
 
 [[language]]
 name = "html"
