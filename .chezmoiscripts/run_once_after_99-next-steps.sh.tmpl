@@ -1,0 +1,21 @@
+#!/bin/bash
+# One-time wrap-up after the first install.
+set -euo pipefail
+
+mkdir -p {{ joinPath .chezmoi.homeDir .projectsDir | quote }} # zellij's file picker opens here
+
+cat <<'EOF'
+
+==> Done. A few things to finish by hand:
+
+  1. GitHub SSH key. gitconfig sends all github.com traffic over SSH, so
+     pushes (and `chezmoi update`) need a key:
+       ssh-keygen -t ed25519 -C "<your email>"
+       gh auth login        # pick SSH and let it upload the key
+
+  2. Start the Docker VM before using docker:
+       colima start
+
+  3. Open Ghostty. Your shell, prompt and zellij take it from there.
+
+EOF
