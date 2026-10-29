@@ -5,11 +5,9 @@ My macOS dev environment, managed with [chezmoi](https://www.chezmoi.io/). One c
 ## Install on a new Mac
 
 ```sh
-xcode-select --install;
+xcode-select --install
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chrisdaly3
 ```
-
-- install `zjstatus` plugin [here](https://github.com/dj95/zjstatus/releases), drop `.wasm` in `~/.config/zellij/plugins`
 
 You'll be asked for:
 
