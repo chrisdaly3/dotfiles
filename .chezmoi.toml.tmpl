@@ -1,0 +1,9 @@
+{{- /* Asked once per machine on `chezmoi init`, then saved to ~/.config/chezmoi/chezmoi.toml */ -}}
+{{- $name := promptStringOnce . "name" "Git name" "Chris Daly" -}}
+{{- $email := promptStringOnce . "email" "Git email" -}}
+{{- $projectsDir := promptStringOnce . "projectsDir" "Projects folder (relative to ~)" "GITHome" -}}
+
+[data]
+    name = {{ $name | quote }}
+    email = {{ $email | quote }}
+    projectsDir = {{ $projectsDir | quote }}

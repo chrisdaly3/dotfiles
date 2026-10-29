@@ -1,0 +1,27 @@
+#!/bin/bash
+# One-time wrap-up after the first install.
+set -euo pipefail
+
+mkdir -p {{ joinPath .chezmoi.homeDir .projectsDir | quote }} # zellij's file picker opens here
+
+cat <<'EOF'
+
+==> Done. A few things to finish by hand:
+
+  1. Ghostty (terminal). Config is already in ~/.config/ghostty/config.
+       Download: https://ghostty.org/download  (open the .dmg, drag to Applications)
+       or:       brew install --cask ghostty
+
+  2. Rectangle (window management).
+       Download: https://rectangleapp.com  (open the .dmg, drag to Applications)
+       or:       brew install --cask rectangle
+     On first launch, allow it under System Settings > Privacy & Security > Accessibility.
+
+  3. GitHub SSH key. gitconfig sends all github.com traffic over SSH, so
+     pushes (and `chezmoi update`) need a key:
+       ssh-keygen -t ed25519 -C "<your email>"
+     then add ~/.ssh/id_ed25519.pub at https://github.com/settings/keys
+
+  4. Open Ghostty. zsh, starship and zellij take it from there.
+
+EOF
