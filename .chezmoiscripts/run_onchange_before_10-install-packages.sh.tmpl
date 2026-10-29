@@ -1,8 +1,0 @@
-#!/bin/bash
-# Install everything in the Brewfile. chezmoi re-runs this whenever the Brewfile changes.
-# Brewfile hash: {{ include "Brewfile" | sha256sum }}
-set -euo pipefail
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-echo "==> Installing packages from Brewfile"
-brew bundle install --no-upgrade --file={{ joinPath .chezmoi.sourceDir "Brewfile" | quote }}
