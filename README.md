@@ -5,7 +5,6 @@ My macOS dev environment, managed with [chezmoi](https://www.chezmoi.io/). One c
 ## Install on a new Mac
 
 ```sh
-xcode-select --install
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply chrisdaly3
 ```
 
